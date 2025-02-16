@@ -1,0 +1,67 @@
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="style.css">
+    <title>l</title>
+</head>
+<body>
+    <div id="Title">
+        <h1>Hiii Jasmine :)</h1>
+    </div>
+    
+    <div id="love">
+        <p class="question">Do you love me?</p>
+    </div>
+    <p id="message" style="font-size:1px;">Answer ittt</p>
+    <button class="no" onclick="reject()">Nope, not even a little</button>
+    <button class="meh" onclick="reject()">Meh, not really</button>
+    <a href="page2.html"><button id="yes">Yes, I love you ❤️</button></a>
+    
+
+    <script>
+        function reject(){
+            var element=document.getElementById("yes");
+            var elementobj=window.getComputedStyle(element);
+            var currwidth=element.clientWidth;
+            var currheight=element.clientHeight;
+            var messageval=document.getElementById("message").textContent;
+            if (messageval=="Answer ittt") {
+                var message="No, pick again";
+                element.style.width="20%"; 
+                element.style.height="40%";
+                element.style.marginLeft="40%";
+                element.style.marginTop="7%";
+            } else if (messageval=="No, pick again") {
+                var message="whyyyy *sob*";
+                element.style.width="30%"; 
+                element.style.height="60%";
+                element.style.marginLeft="35%";
+                element.style.marginTop="5%";
+            } else if (messageval=="whyyyy *sob*") {
+                var message="not that one :(";
+                element.style.width="40%"; 
+                element.style.height="80%";
+                element.style.marginLeft="30%";
+                element.style.marginTop="3%";
+            } else if (messageval=="not that one :(") {
+                var message="Ok, I'm gonna get sad";
+                element.style.width="50%"; 
+                element.style.height="100%";
+                element.style.marginLeft="25%";
+                element.style.marginTop="1%";
+            } else {
+                var message="That's it";
+                element.style.width="100%"; 
+                element.style.height="100%";
+                element.style.marginLeft="0%";
+                element.style.marginTop="0%";
+            }
+            document.getElementById("message").innerHTML=message
+            alert(message)
+            
+ 
+        }
+    </script>
+</body>
+</html>
